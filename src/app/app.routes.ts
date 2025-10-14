@@ -32,9 +32,9 @@ export const routes: Routes = [
       import('./pages/carrito/carrito.component').then(m => m.CarritoComponent)
   },
   {
-    path: 'registro',
+    path: 'accesorios',
     loadComponent: () =>
-      import('./pages/registro/registro.component').then(m => m.RegistroComponent)
+      import('./pages/accesorios/accesorios.component').then(m => m.AccesoriosComponent)
   },
   {
     path: 'login',

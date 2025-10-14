@@ -1,0 +1,96 @@
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  /* Espaciado entre elementos */
+  width: 100%;
+  max-width: 1200px;
+  /* Opcional: limita el ancho total */
+  margin: 0 auto;
+  /* Centra el grid en el contenedor */
+  padding: 1.5rem;
+  /* Espaciado interior */
+
+  /* Diseño responsive con columnas automáticas */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* Centrado del contenido */
+  place-items: center;
+  /* equivale a justify-items + align-items */
+  font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+
+}
+
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    /* Menos espacio entre tarjetas en desktop */
+  }
+}
+
+/**/
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+  margin: 1rem 1rem;
+
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 3rem 3rem;
+  width: 100%;
+}
+
+.card button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 3rem 3rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  display: block;
+  font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+
+
+
+
+}
+
+.card button:hover {
+  background-color: #444;
+}
