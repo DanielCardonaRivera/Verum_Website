@@ -17,7 +17,7 @@ export class AccesoriosComponent {
   ];
 
   agregarAlCarrito(producto: any) {
-    console.log('Agregar al carrito:', producto);
+    alert( producto.nombre + ' Agregado al carrito con éxito.');
     // Por ejemplo, podrías emitir un evento o llamar a un servicio
 
 

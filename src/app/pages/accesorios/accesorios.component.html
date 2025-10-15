@@ -2,7 +2,7 @@
 <h2>Accesorios</h2>
 <div class="grid">
 
-  <div class="producto" *ngFor="let producto of productosAccesorios" (click)="agregarAlCarrito(producto)">
+  <div class="producto" *ngFor="let producto of productosAccesorios" >
     <div class="card">
       <img [src]="producto.imagen" [alt]="producto.nombre">
       <h3>{{ producto.nombre }}</h3>
