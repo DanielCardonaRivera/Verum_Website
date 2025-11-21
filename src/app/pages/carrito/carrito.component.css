@@ -1,0 +1,148 @@
+/* ====== CONTENEDOR GENERAL ====== */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #333;
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+}
+
+.carrito-vacio {
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+
+.total-container {
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+.total-container button {
+    margin: 20px auto;
+    align-items: center;
+    display: block;
+    justify-content: center;
+}
+
+/* ====== LISTA DE PRODUCTOS ====== */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== IMAGEN DEL PRODUCTO ====== */
+li img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* ====== INFO DEL PRODUCTO ====== */
+.producto-info {
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-info strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.producto-info span {
+    font-size: 15px;
+    color: #666;
+}
+
+/* ====== BOTONES ====== */
+button {
+    background-color: #077d6f;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background-color: #c9302c;
+}
+
+/* Botón vaciar carrito */
+.btn-vaciar {
+    background-color: #333;
+    display: block;
+    margin: 20px auto;
+}
+
+.btn-vaciar:hover {
+    background-color: #000;
+}
+
+/* ====== TOTAL ====== */
+.total-container {
+    font-family: 'MaaxRounded', 'ui-rounded', sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+    li {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    li img {
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

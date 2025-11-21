@@ -1,10 +1,21 @@
-<!--Bolsa de compras-->
-<div class="carrito-container">
-   
-    <h2>Carrito de compras</h2>
-    <ul id="lista-carrito">
-        <!-- Los productos se añadirán aquí mediante JavaScript -->
-    </ul>
-    <div class="total">
-        Total: $<span id="total-carrito">0.00</span>
-    </div>
+<h2>Carrito de Compras</h2>
+
+<div *ngIf="carrito.length === 0">
+    <p>Tu carrito está vacío.</p>
+</div>
+
+<ul *ngIf="carrito.length > 0">
+    <li *ngFor="let item of carrito; let i = index">
+        <img [src]="item.imagen" width="60">
+        <strong>{{ item.nombre }}</strong> - ${{ item.precio }}
+
+        <button (click)="eliminarItem(i)">Eliminar</button>
+    </li>
+</ul>
+
+<div *ngIf="carrito.length > 0">
+    <span class="total-container">
+        <h3>Total: ${{ total() }}</h3>
+        <button (click)="vaciarCarrito()">Vaciar carrito</button>
+    </span>
+</div>

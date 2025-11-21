@@ -1,6 +1,8 @@
 // Importamos lo necesario desde Angular
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CarritoService } from '../carrito/carrito.service';
+
 
 // Declaramos el componente usando el decorador @Component
 @Component({
@@ -14,7 +16,7 @@ export class CatalogoComponent {
   // Variable para saber en qué producto está el mouse (hover)
   hover: string | null = null;
 
-  // Muestra directamente la sección de mujeres (puedes cambiar a 'hombres' si prefieres)
+  // Muestra directamente la sección de mujeres
   seccionSeleccionada: 'hombres' | 'mujeres' | null = 'mujeres';
 
   // Guarda el producto que el usuario seleccionó para ver su detalle
@@ -79,8 +81,12 @@ export class CatalogoComponent {
   } 
 
   // Simula agregar un producto al carrito mostrando una alerta
-  agregarAlCarrito(producto: any) {
-    alert(`"${producto.nombre}" agregado al carrito`);
-    this.cerrarDetalle(); // Cierra el detalle después de agregar al carrito
-  }
+
+constructor(private carritoService: CarritoService) {}
+
+agregarAlCarrito(producto: any) {
+  this.carritoService.agregar(producto);
+  alert(`"${producto.nombre}" agregado al carrito`);
+  this.cerrarDetalle();
+}
 }

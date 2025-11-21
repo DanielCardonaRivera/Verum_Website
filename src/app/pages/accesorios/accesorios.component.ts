@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, CurrencyPipe } from '@angular/common';
+import { CarritoService } from '../carrito/carrito.service';
+
 
 
 @Component({
@@ -16,11 +18,13 @@ export class AccesoriosComponent {
     { nombre: 'Collar Inmaculado Corazòn Rosado', precio: 50000, imagen: 'assets/img/collar3.jpg' }
   ];
 
+   // Simula agregar un producto al carrito mostrando una alerta
+  
+  constructor(private carritoService: CarritoService) {}
+  
   agregarAlCarrito(producto: any) {
-    alert( producto.nombre + ' Agregado al carrito con éxito.');
-    // Por ejemplo, podrías emitir un evento o llamar a un servicio
-
-
+    this.carritoService.agregar(producto);
+    alert(`"${producto.nombre}" agregado al carrito`);
   }
 }
 
